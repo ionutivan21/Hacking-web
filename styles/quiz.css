@@ -1,0 +1,141 @@
+.quiz-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.quiz-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.quizzes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.quiz-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.quiz-card h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.quiz-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.quiz-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.quiz-card button:hover {
+    background-color: #45a049;
+}
+
+.quiz-content {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.quiz-header h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.question-container {
+    margin-bottom: 30px;
+}
+
+#question-text {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.answer-option {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: white;
+}
+
+.answer-option:hover {
+    border-color: #667eea;
+    background-color: #f0f0f0;
+}
+
+.answer-option.selected {
+    border-color: #667eea;
+    background-color: #667eea;
+    color: white;
+}
+
+.btn-next {
+    width: 100%;
+    padding: 15px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-next:hover {
+    background-color: #5568d3;
+}
