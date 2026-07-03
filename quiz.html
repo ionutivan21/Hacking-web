@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-uri - EthicalHacking Academy</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🔒 EthicalHacking Academy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="#">Profil</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="quiz-container">
+        <h1>❓ Quiz-uri Interactive</h1>
+        
+        <div id="quizzes" class="quizzes-grid">
+            <div class="quiz-card">
+                <h3>Quiz 1: Introducere în Ethical Hacking</h3>
+                <p>10 întrebări | Nivel: Începător</p>
+                <button onclick="startQuiz(1)">Începe Quiz</button>
+            </div>
+            
+            <div class="quiz-card">
+                <h3>Quiz 2: Network Security</h3>
+                <p>15 întrebări | Nivel: Intermediar</p>
+                <button onclick="startQuiz(2)">Începe Quiz</button>
+            </div>
+            
+            <div class="quiz-card">
+                <h3>Quiz 3: Penetration Testing</h3>
+                <p>20 întrebări | Nivel: Avansat</p>
+                <button onclick="startQuiz(3)">Începe Quiz</button>
+            </div>
+        </div>
+        
+        <div id="quiz-content" class="quiz-content" style="display: none;">
+            <div class="quiz-header">
+                <h2 id="quiz-title"></h2>
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+            </div>
+            
+            <div id="question-container" class="question-container">
+                <p id="question-text"></p>
+                <div id="answers" class="answers"></div>
+            </div>
+            
+            <button class="btn-next" onclick="nextQuestion()">Următoarea întrebare</button>
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthicalHacking Academy - TINKODE</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🔒 EthicalHacking Academy</h1>
+                <p class="tinkode-brand">Powered by TINKODE</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Acasă</a></li>
+                <li><a href="#lectii">Lecții</a></li>
+                <li><a href="#quiz">Quiz-uri</a></li>
+                <li><a href="#teste">Teste</a></li>
+                <li><a href="login.html" class="btn-login">Log In</a></li>
+                <li><a href="register.html" class="btn-register">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Învață Ethical Hacking Profesional</h1>
+            <p>Cursuri complete, teste interactive și certificări recunoscute</p>
+            <button class="btn-primary" onclick="location.href='register.html'">Începe Acum</button>
+        </div>
+    </section>
+
+    <section id="lectii" class="lectii">
+        <h2>📚 Lecții Disponibile</h2>
+        <div class="lectii-grid">
+            <div class="card-lectie">
+                <h3>1. Introducere în Ethical Hacking</h3>
+                <p>Concepte fundamentale și etica hackerului</p>
+                <button onclick="location.href='lectie.html?id=1'">Citește</button>
+            </div>
+            <div class="card-lectie">
+                <h3>2. Network Security Basics</h3>
+                <p>Fundamentele securității rețelelor</p>
+                <button onclick="location.href='lectie.html?id=2'">Citește</button>
+            </div>
+            <div class="card-lectie">
+                <h3>3. Penetration Testing</h3>
+                <p>Testarea penetrării sistemelor</p>
+                <button onclick="location.href='lectie.html?id=3'">Citește</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz">
+        <h2>❓ Quiz-uri Interactive</h2>
+        <p>Testează-ți cunoștințele cu quiz-uri interactive</p>
+        <button class="btn-secondary" onclick="location.href='quiz.html'">Accesează Quiz-urile</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EthicalHacking Academy | Created by <strong>TINKODE</strong></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

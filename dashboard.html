@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EthicalHacking Academy</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🔒 EthicalHacking Academy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="#" onclick="logout()">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Bine ai venit, <span id="userName"></span>!</h1>
+            <p class="tinkode-brand">TINKODE Security Platform</p>
+        </div>
+
+        <div class="dashboard-content">
+            <section class="dashboard-section">
+                <h2>📚 Lecții în Progres</h2>
+                <div class="progress-cards">
+                    <div class="progress-card">
+                        <h3>Introducere în Ethical Hacking</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
+                        </div>
+                        <p>60% completat</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2>❓ Quiz-urile Mele</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Quiz Completate</h3>
+                        <p class="stat-number">3</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Rata de Succes</h3>
+                        <p class="stat-number">85%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Puncte Obținute</h3>
+                        <p class="stat-number">2550</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (currentUser) {
+                document.getElementById('userName').textContent = currentUser.name;
+            } else {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
